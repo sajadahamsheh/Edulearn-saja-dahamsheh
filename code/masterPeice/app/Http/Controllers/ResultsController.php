@@ -31,7 +31,7 @@ class ResultsController extends Controller
             
         }
 
-        // dd($saja);
+        
         
         $courses = Courses::all();
         // $products = $products::where('order_id' , $id) -> get() ;

@@ -186,8 +186,8 @@
 		                                    </li>
 		                                    <!--Courses Menu End-->
                                             @if(Auth::check())
-                                            <li class="menu-item-has-children">
-                                            <a  href="/results"  > <i class="fa fa-user" style="margin-right: 5px !important;"></i> {{auth::user()->name}}</a>
+                                            <li class="menu-item-has-children dropdown">
+                                            <a  href="/results" class='class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"' > <i class="fa fa-user" style="margin-right: 5px !important;"></i> {{auth::user()->name}}</a>
                                             </li>
                                             @else
                                             <li class="menu-item-has-children">

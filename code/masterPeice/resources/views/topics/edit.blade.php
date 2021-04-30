@@ -1,5 +1,27 @@
 @extends('../dashboard/index')
+@section('style')
+<style>
+            .redbtn{
+                background-color: #ff3115 !important;
+                color: white !important;
+                border-radius:0 !important ;
+                border: none !important;
+                padding: 10px 100px !important  ;
+                margin: auto !important;
+                margin-bottom: 20px !important;
+                display: flex !important;
+                justify-content: center !important;
 
+                
+            }
+            .redbtn:hover{
+                background-color: #e41f05 !important;
+                color: rgba(255, 255, 255, 0.7) !important;
+                box-shadow: 0 10px 20px rgb(255 255 255 / 4%) !important;
+
+            }
+</style>
+@endsection
 @section('content')
     <!-- <h3 class="page-title">@lang('quickadmin.topics.title')</h3> -->
     
@@ -27,7 +49,7 @@
         </div>
     </div>
 
-    {!! Form::submit(trans('update'), ['class' => 'btn btn-danger']) !!}
+    {!! Form::submit(trans('update'), ['class' => 'redbtn']) !!}
     {!! Form::close() !!}
 @stop
 

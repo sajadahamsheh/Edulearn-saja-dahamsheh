@@ -1,5 +1,27 @@
 @extends('../dashboard/index')
+@section('style')
+<style>
+            .redbtn{
+                background-color: #ff3115 !important;
+                color: white !important;
+                border-radius:0 !important ;
+                border: none !important;
+                padding: 7px 20px !important  ;
+                margin: auto !important;
+                margin-bottom: 20px !important;
+                display: flex !important;
+                justify-content: center !important;
 
+                
+            }
+            .redbtn:hover{
+                background-color: #e41f05 !important;
+                color: rgba(255, 255, 255, 0.7) !important;
+                box-shadow: 0 10px 20px rgb(255 255 255 / 4%) !important;
+
+            }
+</style>
+@endsection
 @section('content')
 
     {!! Form::open(['method' => 'POST', 'route' => ['questions_options.store']]) !!}
@@ -49,7 +71,7 @@
         </div>
     </div>
 
-    {!! Form::submit(trans('submit'), ['class' => 'btn btn-info mb-3']) !!}
+    {!! Form::submit(trans('submit'), ['class' => 'redbtn']) !!}
     {!! Form::close() !!}
 
     <div class="card mb-4">
@@ -92,7 +114,7 @@
                         @endforeach
                     @else
                         <tr>
-                            <td colspan="5">@lang('quickadmin.no_entries_in_table')</td>
+                            <td colspan="5">No entries in table</td>
                         </tr>
                     @endif
                 </tbody>

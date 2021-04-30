@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card" style="">
-                    <div class="card-header">
+                    <div class="card-header" >
 
                         <img src="main/images/login.png" width="150" alt="" style="margin-left: 320px !important; margin-top: 0px;">
                     </div>
