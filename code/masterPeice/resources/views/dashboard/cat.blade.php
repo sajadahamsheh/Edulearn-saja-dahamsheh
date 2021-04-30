@@ -32,6 +32,12 @@
         <!-- <small id="nameHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
     </div>
     <div class="form-group">
+        <label for="name">Category description</label>
+        <input type="name" name='cat_desc' class="form-control" id="name" aria-describedby=nameHelp"
+            placeholder="Enter name">
+        <!-- <small id="nameHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+    </div>
+    <div class="form-group">
         <label for="exampleInputimg">category img</label>
         <input type="file" name='cat_img' class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
             placeholder="Enter email">
@@ -54,6 +60,7 @@
                     <tr>
                         <th>ID</th>
                         <th>category name</th>
+                        <th>category desc</th>
                         <th>category img</th>
                         <th>Edit</th>
                         <th>Delete</th>
@@ -63,6 +70,7 @@
                     <tr>
                         <th>ID</th>
                         <th>category name</th>
+                        <th>category desc</th>
                         <th>category img</th>
                         <th>Edit</th>
                         <th>Delete</th>
@@ -73,6 +81,7 @@
                     <tr>
                         <td>{{$cat['id']}}</td>
                         <td>{{$cat['cat_name']}}</td>
+                        <td>{{$cat['cat_desc']}}</td>
                         <td><img style="height: 75px;" src="/images/{{$cat['cat_img']}}"></td>
                         <td><a  class='btn btn-info' style="border:none !important;border-radius: 0% !important;padding:7px 20px !important ;  "  href="cat/editcat/{{$cat['id']}}/editcat">Edit</a></td>
                         <td><a  class='btn btn-danger' style="border:none !important;border-radius: 0% !important;padding:7px 20px !important ;  "  href="cat/deletecat/{{$cat['id']}}">Delete</a></td>

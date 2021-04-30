@@ -25,6 +25,7 @@ class UpdateTopicsRequest extends FormRequest
         return [
             
             'title' => 'required',
+            'desc' => 'required',
         ];
     }
 }

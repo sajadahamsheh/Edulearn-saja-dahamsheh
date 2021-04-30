@@ -23,7 +23,12 @@ class courseController extends Controller
         'course_price'    =>'required',
         'course_desc'     =>'required',
         'course_img'      =>'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        'teacher_img'      =>'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         'course_discount' =>'required',
+        'course_level' =>'required',
+        'course_teacher' =>'required',
+        'teacher_education' =>'required',
+        'lessons' =>'required',
         'cat_id' =>'required',
     ]);      
     if (!empty(request()->course_img)){
@@ -33,14 +38,26 @@ class courseController extends Controller
     else {
         $imageName= 'default.png';
     }
+    if (!empty(request()->teacher_img)){
+        $image = time().'.'.request()->teacher_img->getClientOriginalExtension();
+        request()->teacher_img->move(public_path('images'), $imageName);
+    }
+    else {
+        $image= 'default.png';
+    }
 
     $course = new Courses();
     $course ->course_name     =$req['course_name']; 
     $course ->course_price    =$req['course_price']; 
     $course ->course_desc     =$req['course_desc']; 
     $course ->course_discount =$req['course_discount']; 
+    $course ->course_level    =$req['course_level']; 
+    $course ->lessons         =$req['lessons']; 
+    $course ->course_teacher  =$req['course_teacher']; 
+    $course ->teacher_education=$req['teacher_education']; 
     $course ->cat_id          =$req['cat_id']; 
     $course ->course_img      =$imageName;
+    $course ->teacher_img      =$image;
     $course ->save();
     return redirect('/course');
    }

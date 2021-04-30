@@ -45,6 +45,18 @@
                     @endif
                 </div>
             </div>
+            <div class="row">
+                <div class="col-xl-12 form-group ">
+                    {!! Form::label('desc', 'description*', ['class' => 'control-label']) !!}
+                    {!! Form::text('desc', old('desc'), ['class' => 'form-control', 'placeholder' => '']) !!}
+                    <p class="help-block"></p>
+                    @if($errors->has('desc'))
+                        <p class="help-block">
+                            {{ $errors->first('desc') }}
+                        </p>
+                    @endif
+                </div>
+            </div>
             
         </div>
     </div>

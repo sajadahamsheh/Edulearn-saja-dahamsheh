@@ -34,6 +34,7 @@ class CatController extends Controller
         $req->validate([
             'cat_name'    =>'required',
             'cat_img'   =>'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'cat_desc'   =>'required',
             
         ]);
         if (!empty(request()->cat_img)){
@@ -45,6 +46,7 @@ class CatController extends Controller
         }
         $cat          = new CourseCat();
         $cat->cat_name    = $req['cat_name'];
+        $cat->cat_desc    = $req['cat_desc'];
         $cat->cat_img     = $imageName;
         $cat->save();
         return redirect('/cat');
@@ -65,6 +67,7 @@ class CatController extends Controller
         $cat=new CourseCat();
         $cat=$cat->find($id);
         $cat ->cat_name=$req['cat_name'];
+        $cat ->cat_desc=$req['cat_desc'];
         $cat ->cat_img=$imageName;
         $cat ->save();
         return redirect ('/cat');

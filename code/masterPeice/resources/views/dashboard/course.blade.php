@@ -50,10 +50,45 @@
             placeholder="course discount">
         <!-- <small id="nameHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
     </div>
+    <div class="form-group">
+        <label for="name">Number of lessons</label>
+        <input type="number" name='lessons' class="form-control" id="name" aria-describedby=nameHelp"
+            placeholder="course discount">
+        <!-- <small id="nameHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+    </div>
+    <div class="form-group">
+        <label for="name">course teacher</label>
+        <input type="text" name='course_teacher' class="form-control" id="name" aria-describedby=nameHelp"
+            placeholder="course discount">
+        <!-- <small id="nameHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+    </div>
+    <div class="form-group">
+        <label for="name">teacher education</label>
+        <input type="text" name='teacher_education' class="form-control" id="name" aria-describedby=nameHelp"
+            placeholder="course discount">
+        <!-- <small id="nameHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+    </div>
 
     <div class="form-group">
         <label for="exampleInputPassword1">Course image</label>
         <input type="file" name='course_img' class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Teacher image</label>
+        <input type="file" name='teacher_img' class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+    <div class="form-group">
+        <label for="name">Course level</label>
+        
+            <select class="form-control" name="course_level">
+                <option selected="">Choose ....</option>
+                
+                <option >Basic</option>
+                <option >mid level</option>
+                <option >high level</option>
+                
+            </select>
+        
     </div>
     <div class="form-group">
         <label for="name">Category Name</label>
@@ -86,6 +121,11 @@
                         <th>course img</th>
                         <th>course price</th>
                         <th>course discount</th>
+                        <th>Number of lessons</th>
+                        <th>Course level</th>
+                        <th>Course teacher</th>
+                        <th>Teacher education</th>
+                        <th>Teacher image</th>
                         <th>category name</th>
                         <th>Edit</th>
                         <th>Delete</th>
@@ -99,6 +139,11 @@
                         <th>course img</th>
                         <th>course price</th>
                         <th>course discount</th>
+                        <th>Number of lessons</th>
+                        <th>Course level</th>
+                        <th>Course teacher</th>
+                        <th>Teacher education</th>
+                        <th>Teacher image</th>
                         <th>category name</th>
                         <th>Edit</th>
                         <th>Delete</th>
@@ -113,6 +158,11 @@
                         <td><img style="height: 75px;" src="/images/{{$course['course_img']}}" alt=""></td>
                         <td>{{$course['course_price']}}</td>
                         <td>{{$course['course_discount']}}</td>
+                        <td>{{$course['lessons']}}</td>
+                        <td>{{$course['course_level']}}</td>
+                        <td>{{$course['course_teacher']}}</td>
+                        <td>{{$course['teacher_education']}}</td>
+                        <td><<img style="height: 75px;" src="/images/{{$course['teacher_img']}}" alt=""></td>
                         @foreach ($cats as $cat)
                         @if ($cat['id']== $course['cat_id'])
                         <td> {{$cat['cat_name']}}</td>

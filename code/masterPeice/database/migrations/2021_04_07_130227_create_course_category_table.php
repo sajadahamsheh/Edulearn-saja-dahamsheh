@@ -16,6 +16,7 @@ class CreateCourseCategoryTable extends Migration
             $table->id();
             $table->string('cat_name');
             $table->string('cat_img');
+            $table->string('cat_desc');
             $table->timestamps();
         });
     }

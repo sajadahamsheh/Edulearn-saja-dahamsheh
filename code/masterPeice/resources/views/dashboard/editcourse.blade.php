@@ -52,6 +52,41 @@
             id="name" aria-describedby="nameHelp" placeholder="Enter name">
 
     </div>
+    <div class="form-group">
+        <label for="name">Number of lessons</label>
+        <input type="number" name='lessons' class="form-control" value="{{$course['lessons']}}"  id="name" aria-describedby=nameHelp"
+            placeholder="course discount">
+        <!-- <small id="nameHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+    </div>
+    <div class="form-group">
+        <label for="name">course teacher</label>
+        <input type="text" name='course_teacher' class="form-control" value="{{$course['course_teacher']}}"  id="name" aria-describedby=nameHelp"
+            placeholder="course discount">
+        <!-- <small id="nameHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+    </div>
+    <div class="form-group">
+        <label for="name">teacher education</label>
+        <input type="text" name='teacher_education' class="form-control"  value="{{$course['teacher_education']}}" id="name" aria-describedby=nameHelp"
+            placeholder="course discount">
+        <!-- <small id="nameHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Teacher image</label>
+        <input type="file" name='teacher_img' class="form-control" value="{{$course['teacher_img']}}"  id="exampleInputPassword1" placeholder="Password">
+    </div>
+    <div class="form-group">
+        <label for="name">Course level</label>
+        
+            <select class="form-control" name="course_level">
+                <option selected="">Choose ....</option>
+                
+                <option >Basic</option>
+                <option >mid level</option>
+                <option >high level</option>
+                
+            </select>
+        
+    </div>
 
     <div class="form-group">
         <label for="exampleInputPassword1">course image</label>

@@ -42,6 +42,18 @@
                     @endif
                 </div>
             </div>
+            <div class="row">
+                <div class="col-xl-12 form-group">
+                    {!! Form::label('desc', 'Add description*', ['class' => 'control-label']) !!}
+                    {!! Form::text('desc', old('desc'), ['class' => 'form-control', 'placeholder' => 'Add description']) !!}
+                    <p class="help-block"></p>
+                    @if($errors->has('desc'))
+                        <p class="help-block">
+                            {{ $errors->first('desc') }}
+                        </p>
+                    @endif
+                </div>
+            </div>
             
         </div>
     </div>
@@ -58,6 +70,7 @@
                 <thead>
                     <tr>
                         <th>Topics title</th>
+                        <th>Topics desc</th>
                         <th>Edit</th>
                         <th>Delete</th>
                         
@@ -70,6 +83,7 @@
                             <tr>
                                 
                                 <td>{{ $topic['title'] }}</td>
+                                <td>{{ $topic['desc'] }}</td>
                                 <td>
                                    
                                     <a href="{{ route('topics.edit',[$topic->id]) }}" class='btn btn-info' style="border: none; border-radius: 0%; padding: 7px 20px; "> Edit</a>
